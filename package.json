@@ -1,0 +1,26 @@
+{
+	"name": "t20db",
+	"version": "0.0.1",
+	"description": "Um repositório completo para Tormenta20",
+	"repository": {
+		"url": "https://github.com/NiiMiyo/t20db"
+	},
+
+	"scripts": {
+		"dev": "vite"
+	},
+
+	"author": "NiiMiyo",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react-dom": "^19.2.3",
+		"@types/webpack": "^5.28.5",
+		"typescript": "^5.9.3",
+		"vite": "^7.3.0"
+	},
+
+	"dependencies": {
+		"react": "^19.2.3",
+		"react-dom": "^19.2.3"
+	}
+}
