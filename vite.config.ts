@@ -10,6 +10,8 @@ export default defineConfig( {
 		},
 	},
 
+	base: "/t20db/",
+
 	plugins: [
 		generateFile( [
 			{
