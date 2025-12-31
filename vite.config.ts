@@ -17,6 +17,6 @@ export default defineConfig( {
 				output: "./racas.json",
 				data: require( "./src/data/racas/index.ts" ).Racas,
 			}
-		] )
+		] ),
 	],
 } );
