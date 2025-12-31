@@ -21,6 +21,15 @@ export const Racas: Raca[] = [
 	humano, anao, dahllan, elfo, goblin, lefou, minotauro, qareen, golem, hynne,
 	kliren, medusa, osteon, sereia_tritao, silfide, suraggel_aggelus, suraggel_sulfure,
 	trog,
-].sort( ( r1, r2 ) => r1.nome.localeCompare( r2.nome ) );
+].map( tratarRaca ).sort( ordenarRacas );
+
+function ordenarRacas(r1: Raca.Raca, r2: Raca.Raca): number {
+	return r1.nome.localeCompare(r2.nome)
+}
+
+function tratarRaca( raca: Raca ): Raca {
+	raca.habilidades.sort( ( h1, h2 ) => h1.nome.localeCompare( h2.nome ) );
+	return raca;
+}
 
 export default Racas;
