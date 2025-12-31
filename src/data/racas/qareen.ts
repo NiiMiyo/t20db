@@ -19,8 +19,8 @@ export default {
 			texto: "Você pode lançar uma magia de 1º círculo a sua escolha (atributo-chave Carisma). Caso aprenda novamente essa magia, seu custo diminui em –1 PM. (Mágica)",
 		},
 	],
-	origem: {
-		livro: "Livro Básico",
+	livro: {
+		nome: "Livro Básico",
 		pagina: 26,
 	},
 } satisfies Raca;

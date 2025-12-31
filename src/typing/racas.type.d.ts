@@ -7,7 +7,7 @@ declare namespace Raca {
 		} & {
 			[ k in string ]?: number;
 		};
-		origem: Origem;
+		livro: LivroTormenta;
 	}
 
 	type Habilidade = {

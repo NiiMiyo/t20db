@@ -19,8 +19,8 @@ export default {
 			texto: "Quando faz um teste de resistência, você pode gastar 1 PM para rolar este teste novamente.",
 		},
 	],
-	origem: {
-		livro: "Livro Básico",
+	livro: {
+		nome: "Livro Básico",
 		pagina: 27,
 	},
 } satisfies Raca;

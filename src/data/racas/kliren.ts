@@ -23,8 +23,8 @@ export default {
 			texto: "Você recebe proficiência em armas de fogo e +2 em Ofício (um qualquer, a sua escolha).",
 		},
 	],
-	origem: {
-		livro: "Livro Básico",
+	livro: {
+		nome: "Livro Básico",
 		pagina: 28,
 	},
 } satisfies Raca;
