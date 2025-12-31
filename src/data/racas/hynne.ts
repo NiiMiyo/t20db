@@ -1,0 +1,26 @@
+export default {
+	nome: "Hynne",
+	atributos: {
+		Destreza: 2,
+		Carisma: 1,
+		Força: -1,
+	},
+	habilidades: [
+		{
+			nome: "Arremessador",
+			texto: "Quando faz um ataque à distância com uma funda ou uma arma de arremesso, seu dano aumenta em um passo.",
+		},
+		{
+			nome: "Pequeno e Rechonchudo",
+			texto: "Seu tamanho é Pequeno (veja a página 106) e seu deslocamento é 6m. Você recebe +2 em Enganação e pode usar Destreza como atributo-chave de Atletismo (em vez de Força).",
+		},
+		{
+			nome: "Sorte Salvadora",
+			texto: "Quando faz um teste de resistência, você pode gastar 1 PM para rolar este teste novamente.",
+		},
+	],
+	origem: {
+		livro: "Livro Básico",
+		pagina: 27,
+	},
+} satisfies Raca;
