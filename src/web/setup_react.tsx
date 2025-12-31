@@ -7,7 +7,7 @@ import "@/web/styles/global.less";
 
 const root = createRoot( document.getElementById( "react-app" )! );
 
-root.render( <HashRouter basename={ import.meta.env.BASE_URL }>
+root.render( <HashRouter>
 	<Routes>
 		<Route Component={ HomePage } path={ PagesHref.home } />
 		<Route Component={ RacasPage } path={ PagesHref.racas } />
