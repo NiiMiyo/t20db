@@ -3,14 +3,16 @@ import path from "node:path";
 import { defineConfig } from "vite";
 import generateFile from "vite-plugin-generate-file";
 
-export default defineConfig( {
+export default defineConfig( env => ({
 	resolve: {
 		alias: {
 			"@": path.resolve( __dirname, "src" ),
 		},
 	},
 
-	base: "/t20db/",
+	base: env.mode === "production"
+		? "/t20db/"
+		: undefined,
 
 	plugins: [
 		generateFile( [
@@ -21,4 +23,4 @@ export default defineConfig( {
 			}
 		] ),
 	],
-} );
+}) );
