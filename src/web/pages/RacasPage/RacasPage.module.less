@@ -1,0 +1,42 @@
+@import url(/src/web/styles/colors.less);
+
+.raca {
+	margin: .5rem 0;
+
+	&:not( :last-of-type ) {
+		padding-bottom: .5rem;
+		border-bottom: solid 1px @color-red;
+	}
+
+	.sumario {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		.nome {
+			font-size: 1.25rem;
+		}
+
+		.livro {
+			font-style: italic;
+			margin-top: .1rem;
+			margin-bottom: .25rem;
+		}
+	}
+
+	.atributos,
+	.habilidade_nome {
+		color: @color-red;
+		font-weight: bold;
+		font-variant: small-caps;
+	}
+
+	.atributos {
+		margin-bottom: .35rem;
+	}
+
+	.habilidade:not( :last-child ) {
+		margin-bottom: .25rem;
+		text-align: justify;
+	}
+}
