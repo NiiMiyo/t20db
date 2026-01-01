@@ -47,10 +47,10 @@ export function ordenarAtributos( atributos: Raca["atributos"] ): Raca["atributo
 				return a2.valor! - a1.valor!;
 
 			else if ( a1.fixo )
-				return 1;
+				return -1;
 
 			else
-				return -1;
+				return 1;
 		} );
 
 	const atributosOrdenados: Raca["atributos"] = {};
