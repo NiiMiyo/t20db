@@ -12,7 +12,8 @@ declare namespace Raca {
 
 	type Habilidade = {
 		nome: string;
-		texto: string;
+		// todo: Adicionar símbolo para habilidades mágicas
+		texto: string | React.JSX.Element;
 	};
 }
 

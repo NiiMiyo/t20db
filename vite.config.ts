@@ -19,7 +19,7 @@ export default defineConfig( env => ({
 			{
 				type: "json",
 				output: "./racas.json",
-				data: require( "./src/data/racas/index.ts" ).Racas,
+				data: require( "./src/scripts/gerar_json" ).JsonObject,
 			}
 		] ),
 	],

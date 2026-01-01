@@ -28,9 +28,9 @@ export function RacasPage() {
 }
 
 export function HabilidadeComponent( { habilidade }: Readonly<HabilidadeComponentProps> ) {
-	return <p className={ styles.habilidade }>
+	return <div className={ styles.habilidade }>
 		<span className={ styles.habilidade_nome }>{ habilidade.nome }.</span> { habilidade.texto }
-	</p>
+	</div>
 }
 
 type HabilidadeComponentProps = {
