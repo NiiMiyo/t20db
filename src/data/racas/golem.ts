@@ -23,6 +23,7 @@ export default {
 			texto: "Você foi construído “pronto” para um propósito específico e não teve uma infância. Você não tem direito a escolher uma origem, mas recebe um poder geral a sua escolha.",
 		},
 	],
+	longevidade: "x5",
 	livro: {
 		nome: "Livro Básico",
 		pagina: 27,

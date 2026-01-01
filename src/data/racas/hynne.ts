@@ -19,6 +19,7 @@ export default {
 			texto: "Quando faz um teste de resistência, você pode gastar 1 PM para rolar este teste novamente.",
 		},
 	],
+	longevidade: "Normal",
 	livro: {
 		nome: "Livro Básico",
 		pagina: 27,

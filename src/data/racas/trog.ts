@@ -23,6 +23,7 @@ export default {
 			texto: " Você sofre 1 ponto de dano adicional por dado de dano de frio.",
 		},
 	],
+	longevidade: "Normal",
 	livro: {
 		nome: "Livro Básico",
 		pagina: 31,

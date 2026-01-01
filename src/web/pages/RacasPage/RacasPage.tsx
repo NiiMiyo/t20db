@@ -20,6 +20,11 @@ export function RacasPage() {
 				</p>
 
 				{ raca.habilidades.map( h => <HabilidadeComponent key={ h.nome } habilidade={ h } /> ) }
+
+				<HabilidadeComponent habilidade={ {
+					nome: "Longevidade",
+					texto: `${raca.longevidade}.`,
+				} } />
 			</details> ) }
 		</div>
 	</div>;

@@ -20,6 +20,7 @@ export default {
 			texto: "Você pode se comunicar com animais por meio de linguagem corporal e vocalizações. Você pode usar Adestramento para mudar atitude e persuasão com animais (veja Diplomacia, na página 118). Caso receba esta habilidade novamente, recebe +2 em Adestramento.",
 		},
 	],
+	longevidade: "x5",
 	livro: {
 		nome: "Livro Básico",
 		pagina: 21,

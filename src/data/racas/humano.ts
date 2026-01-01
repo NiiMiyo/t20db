@@ -13,6 +13,7 @@ export default {
 			texto: "Você se torna treinado em duas perícias a sua escolha (não precisam ser da sua classe). Você pode trocar uma dessas perícias por um poder geral a sua escolha."
 		},
 	],
+	longevidade: "Normal",
 	livro: {
 		nome: "Livro Básico",
 		pagina: 19,

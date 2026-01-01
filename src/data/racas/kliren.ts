@@ -23,6 +23,7 @@ export default {
 			texto: "Você recebe proficiência em armas de fogo e +2 em Ofício (um qualquer, a sua escolha).",
 		},
 	],
+	longevidade: "Normal",
 	livro: {
 		nome: "Livro Básico",
 		pagina: 28,

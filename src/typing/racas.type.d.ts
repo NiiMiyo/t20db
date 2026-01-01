@@ -7,6 +7,7 @@ declare namespace Raca {
 		} & {
 			[ k in string ]?: number;
 		};
+		longevidade: Longevidade;
 		livro: LivroTormenta;
 	}
 
@@ -15,6 +16,8 @@ declare namespace Raca {
 		magica?: boolean;
 		texto: string | React.JSX.Element;
 	};
+
+	type Longevidade = "Normal" | "x2" | "x5" | "Indefinida";
 
 	// todo: Adicionar devoções
 }

@@ -19,6 +19,7 @@ export default {
 			texto: "Você recebe visão na penumbra e +2 em Misticismo e Percepção.",
 		},
 	],
+	longevidade: "x5",
 	livro: {
 		nome: "Livro Básico",
 		pagina: 22,

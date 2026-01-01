@@ -23,6 +23,7 @@ export default {
 			texto: "Você recebe +2 em Fortitude e sua recuperação de PV e PM nunca é inferior ao seu nível.",
 		},
 	],
+	longevidade: "Normal",
 	livro: {
 		nome: "Livro Básico",
 		pagina: 23,

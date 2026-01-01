@@ -20,6 +20,7 @@ export default {
 			magica: true,
 		},
 	],
+	longevidade: "x5",
 	livro: {
 		nome: "Livro Básico",
 		pagina: 30,

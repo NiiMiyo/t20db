@@ -22,6 +22,7 @@ export default {
 			texto: "Você precisa passar oito horas sob a luz de estrelas ou no subterrâneo. Se fizer isso, recupera PV e PM por descanso em condições normais (osteon não são afetados por condições boas ou ruins de descanso). Caso contrário, sofre os efeitos de fome.",
 		},
 	],
+	longevidade: "x5",
 	livro: {
 		nome: "Livro Básico",
 		pagina: 29,

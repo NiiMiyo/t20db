@@ -23,6 +23,7 @@ export default {
 			texto: "Você é perito nas armas tradicionais anãs, seja por ter treinado com elas, seja por usá-las como ferramentas de ofício. Para você, todos os machados, martelos, marretas e picaretas são armas simples. Você recebe +2 em ataques com essas armas.",
 		},
 	],
+	longevidade: "x2",
 	livro: {
 		nome: "Livro Básico",
 		pagina: 20,
