@@ -1,5 +1,5 @@
 import Racas from "@/data/racas";
-import { PageTitle } from "@/web/components";
+import { EspiralMagica, PageTitle } from "@/web/components";
 import styles from "./RacasPage.module.less";
 
 export function RacasPage() {
@@ -32,7 +32,7 @@ export function RacasPage() {
 
 export function HabilidadeComponent( { habilidade }: Readonly<HabilidadeComponentProps> ) {
 	return <div className={ styles.habilidade }>
-		<span className={ styles.habilidade_nome }>{ habilidade.nome }.</span> { habilidade.texto } { habilidade.magica && "🌀" }
+		<span className={ styles.habilidade_nome }>{ habilidade.nome }.</span> { habilidade.texto } { habilidade.magica && <EspiralMagica /> }
 		{ /* todo: Usar um símbolo de magia mais bonitinho */ }
 	</div>
 }
