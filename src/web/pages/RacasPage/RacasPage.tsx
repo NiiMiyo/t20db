@@ -1,5 +1,5 @@
 import Racas from "@/data/racas";
-import { EspiralMagica, PageTitle } from "@/web/components";
+import { RenderHabilidade, PageTitle } from "@/web/components";
 import styles from "./RacasPage.module.less";
 
 export function RacasPage() {
@@ -22,24 +22,9 @@ export function RacasPage() {
 					}.
 				</p>
 
-				{ raca.habilidades.map( h => <HabilidadeComponent key={ h.nome } habilidade={ h } /> ) }
-
-				<HabilidadeComponent habilidade={ {
-					nome: "Longevidade",
-					texto: `${raca.longevidade}.`,
-				} } />
+				{ raca.habilidades.map( h => <RenderHabilidade key={ h.nome } habilidade={ h } /> ) }
+				<RenderHabilidade habilidade={ { nome: "Longevidade", texto: `${raca.longevidade}.`, } } />
 			</details> ) }
 		</div>
 	</div>;
 }
-
-export function HabilidadeComponent( { habilidade }: Readonly<HabilidadeComponentProps> ) {
-	return <div className={ styles.habilidade }>
-		<span className={ styles.habilidade_nome }>{ habilidade.nome }.</span> { habilidade.texto } { habilidade.preRequisitos?.length ? <>{ " " }<i>Pré-Requisitos:</i> { habilidade.preRequisitos.join( ", " ) }.</> : null } { habilidade.magica && <EspiralMagica /> }
-		{ /* todo: Usar um símbolo de magia mais bonitinho */ }
-	</div>
-}
-
-type HabilidadeComponentProps = {
-	habilidade: Raca.Habilidade;
-};

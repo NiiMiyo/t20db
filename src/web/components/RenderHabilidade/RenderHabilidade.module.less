@@ -1,0 +1,25 @@
+@import url(/src/web/styles/colors.less);
+
+.habilidade {
+	text-align: justify;
+
+	ul,
+	ol {
+		padding-left: 1rem;
+
+		li {
+			list-style-position: inside;
+			margin-bottom: .3rem;
+		}
+	}
+
+	& + & {
+		margin-top: .25rem;
+	}
+}
+
+.nome {
+	color: @color-red;
+	font-weight: bold;
+	font-variant: small-caps;
+}
