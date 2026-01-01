@@ -35,7 +35,7 @@ export function RacasPage() {
 
 export function HabilidadeComponent( { habilidade }: Readonly<HabilidadeComponentProps> ) {
 	return <div className={ styles.habilidade }>
-		<span className={ styles.habilidade_nome }>{ habilidade.nome }.</span> { habilidade.texto } { habilidade.magica && <EspiralMagica /> }
+		<span className={ styles.habilidade_nome }>{ habilidade.nome }.</span> { habilidade.texto } { habilidade.preRequisitos?.length ? <>{ " " }<i>Pré-Requisitos:</i> { habilidade.preRequisitos.join( ", " ) }.</> : null } { habilidade.magica && <EspiralMagica /> }
 		{ /* todo: Usar um símbolo de magia mais bonitinho */ }
 	</div>
 }

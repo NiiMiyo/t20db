@@ -15,6 +15,7 @@ declare namespace Raca {
 		nome: string;
 		magica?: boolean;
 		texto: string | React.JSX.Element;
+		preRequisitos?: string[];
 	};
 
 	type Longevidade = "Normal" | "x2" | "x5" | "Indefinida";
