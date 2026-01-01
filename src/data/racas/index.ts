@@ -32,6 +32,9 @@ function ordenarRacas(r1: Raca.Raca, r2: Raca.Raca): number {
 }
 
 export function ordenarAtributos( atributos: Raca["atributos"] ): Raca["atributos"] {
+	if ( typeof atributos === "string" )
+		return atributos;
+
 	const atributosList = Object.entries( atributos )
 		.map( ( [ atributo, valor ] ) => ({
 			nome: atributo,

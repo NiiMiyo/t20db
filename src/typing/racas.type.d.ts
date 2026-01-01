@@ -2,11 +2,11 @@ declare namespace Raca {
 	type Raca = {
 		nome: string;
 		habilidades: Raca.Habilidade[];
-		atributos: {
+		atributos: ({
 			[ k in Atributo ]?: number;
 		} & {
 			[ k in string ]?: number;
-		};
+		}) | string;
 		longevidade: Longevidade;
 		livro: LivroTormenta;
 	}

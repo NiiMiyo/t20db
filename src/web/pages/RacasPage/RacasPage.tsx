@@ -13,10 +13,13 @@ export function RacasPage() {
 				</summary>
 
 				<p className={ styles.atributos }>
-					{ Object.entries( raca.atributos ).map( ( [ atributo, valor ] ) => {
-						return `${ atributo } ${ valor! > 0 ? "+" : "" }${valor}`;
-					} )
-					.join( ", " ) }.
+					{ typeof raca.atributos === "string"
+						? raca.atributos
+						: Object.entries( raca.atributos ).map( ( [ atributo, valor ] ) => {
+							return `${ atributo } ${ valor! > 0 ? "+" : "" }${valor}`;
+						} )
+						.join( ", " )
+					}.
 				</p>
 
 				{ raca.habilidades.map( h => <HabilidadeComponent key={ h.nome } habilidade={ h } /> ) }
