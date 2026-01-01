@@ -11,7 +11,8 @@ export default {
 		},
 		{
 			nome: "Luz Sagrada",
-			texto: "Você recebe +2 em Diplomacia e Intuição. Além disso, pode lançar Luz (como uma magia divina; atributo-chave Carisma). Caso aprenda novamente essa magia, seu custo diminui em –1 PM. (Mágica)",
+			texto: "Você recebe +2 em Diplomacia e Intuição. Além disso, pode lançar Luz (como uma magia divina; atributo-chave Carisma). Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+			magica: true,
 		},
 	],
 	livro: {

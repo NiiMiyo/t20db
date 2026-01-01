@@ -6,7 +6,8 @@ export default {
 	habilidades: [
 		{
 			nome: "Canção dos Mares",
-			texto: "Você pode lançar duas das magias a seguir: Amedrontar, Comando, Despedaçar, Enfeitiçar, Hipnotismo ou Sono (atributo-chave Carisma). Caso aprenda novamente uma dessas magias, seu custo diminui em –1 PM. (Mágica)",
+			texto: "Você pode lançar duas das magias a seguir: Amedrontar, Comando, Despedaçar, Enfeitiçar, Hipnotismo ou Sono (atributo-chave Carisma). Caso aprenda novamente uma dessas magias, seu custo diminui em –1 PM.",
+			magica: true,
 		},
 		{
 			nome: "Mestre do Tridente",

@@ -16,7 +16,8 @@ export default {
 		},
 		{
 			nome: "Magia das Fadas",
-			texto: "Você pode lançar duas das magias a seguir (atributo-chave Carisma): Criar Ilusão, Enfeitiçar, Luz (como uma magia arcana) e Sono. Caso aprenda novamente uma dessas magias, seu custo diminui em –1 PM. (Mágica)",
+			texto: "Você pode lançar duas das magias a seguir (atributo-chave Carisma): Criar Ilusão, Enfeitiçar, Luz (como uma magia arcana) e Sono. Caso aprenda novamente uma dessas magias, seu custo diminui em –1 PM.",
+			magica: true,
 		},
 	],
 	livro: {

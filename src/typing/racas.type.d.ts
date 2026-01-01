@@ -12,9 +12,11 @@ declare namespace Raca {
 
 	type Habilidade = {
 		nome: string;
-		// todo: Adicionar símbolo para habilidades mágicas
+		magica?: boolean;
 		texto: string | React.JSX.Element;
 	};
+
+	// todo: Adicionar devoções
 }
 
 type Raca = Raca.Raca;

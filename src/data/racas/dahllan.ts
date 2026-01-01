@@ -8,7 +8,8 @@ export default {
 	habilidades: [
 		{
 			nome: "Amiga das Plantas",
-			texto: "Você pode lançar a magia Controlar Plantas (atributo-chave Sabedoria). Caso aprenda novamente essa magia, seu custo diminui em –1 PM. (Mágica)",
+			texto: "Você pode lançar a magia Controlar Plantas (atributo-chave Sabedoria). Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+			magica: true,
 		},
 		{
 			nome: "Armadura de Allihanna",

@@ -14,10 +14,8 @@ export function RacasPage() {
 
 				<p className={ styles.atributos }>
 					{ Object.entries( raca.atributos ).map( ( [ atributo, valor ] ) => {
-						if ( valor === undefined )
-							return undefined;
-						return `${ atributo } ${ valor > 0 ? "+" : "" }${valor}`;
-					} ).filter( a => a !== undefined )
+						return `${ atributo } ${ valor! > 0 ? "+" : "" }${valor}`;
+					} )
 					.join( ", " ) }.
 				</p>
 
@@ -29,7 +27,8 @@ export function RacasPage() {
 
 export function HabilidadeComponent( { habilidade }: Readonly<HabilidadeComponentProps> ) {
 	return <div className={ styles.habilidade }>
-		<span className={ styles.habilidade_nome }>{ habilidade.nome }.</span> { habilidade.texto }
+		<span className={ styles.habilidade_nome }>{ habilidade.nome }.</span> { habilidade.texto } { habilidade.magica && "🌀" }
+		{ /* todo: Usar um símbolo de magia mais bonitinho */ }
 	</div>
 }
 

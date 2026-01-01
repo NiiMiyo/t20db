@@ -11,7 +11,8 @@ export default {
 		},
 		{
 			nome: "Sombras Profanas",
-			texto: "Você recebe +2 em Enganação e Furtividade. Além disso, pode lançar Escuridão (como uma magia divina; atributo-chave Inteligência). Caso aprenda novamente essa magia, seu custo diminui em –1 PM. (Mágica)",
+			texto: "Você recebe +2 em Enganação e Furtividade. Além disso, pode lançar Escuridão (como uma magia divina; atributo-chave Inteligência). Caso aprenda novamente essa magia, seu custo diminui em –1 PM.",
+			magica: true,
 		},
 	],
 	livro: {
