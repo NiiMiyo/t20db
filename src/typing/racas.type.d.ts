@@ -8,13 +8,14 @@ declare namespace Raca {
 			[ k in string ]?: number;
 		}) | string;
 		longevidade: Longevidade;
-		livro: LivroTormenta;
+		livro: LivroPagina;
 	}
 
 	type Habilidade = {
 		nome: string;
 		magica?: boolean;
 		texto: string | React.JSX.Element;
+		tipoEfeito?: TipoDeEfeito;
 		preRequisitos?: string[];
 	};
 
