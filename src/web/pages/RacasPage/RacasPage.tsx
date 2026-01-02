@@ -13,8 +13,8 @@ export function RacasPage() {
 					<span className={ styles.livro }>{ raca.livro.nome } p. { raca.livro.pagina }</span>
 				</summary>
 
-				<p className={ styles.atributos }>
-					{ typeof raca.atributos === "string"
+				<RenderHabilidade habilidade={ {
+					nome: ( typeof raca.atributos === "string"
 						? raca.atributos
 						: Object.entries( raca.atributos ).map( ( [ atributo, valor ] ) => {
 							if ( isAtributo( atributo ) )
@@ -23,9 +23,9 @@ export function RacasPage() {
 							else
 								return `${ valor! > 0 ? "+" : "" }${valor} em ${ atributo }`;
 						} )
-						.join( ", " )
-					}.
-				</p>
+						.join( ", " ) ) + ".",
+						texto: <></>,
+				} }/>
 
 				{ raca.habilidades.map( h => <RenderHabilidade key={ h.nome } habilidade={ h } /> ) }
 				<RenderHabilidade habilidade={ { nome: "Longevidade", texto: `${raca.longevidade}.`, } } />
