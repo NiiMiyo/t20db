@@ -4,7 +4,7 @@ import * as cheerio from "cheerio";
 // imports must be relative as this script is required on vite.config.ts
 import Racas from "../data/racas/index.ts";
 
-export function gerarJson(): Raca[] {
+export function gerarJsonRacas(): Raca[] {
 	return Racas.map( raca => {
 		raca.habilidades = raca.habilidades.map( habilidade => {
 			if ( typeof habilidade.texto !== "string" ) {
@@ -29,5 +29,3 @@ export function gerarJson(): Raca[] {
 		return raca;
 	} );
 }
-
-export const JsonObject = gerarJson();

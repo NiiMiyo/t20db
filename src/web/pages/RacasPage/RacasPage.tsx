@@ -1,7 +1,7 @@
 import Racas from "@/data/racas";
 import { RenderHabilidade, PageTitle } from "@/web/components";
 import styles from "./RacasPage.module.less";
-import { isAtributo } from "@/utils/tormenta";
+import { textoAtributos } from "@/utils/racas";
 
 export function RacasPage() {
 	return <div>
@@ -14,17 +14,8 @@ export function RacasPage() {
 				</summary>
 
 				<RenderHabilidade habilidade={ {
-					nome: ( typeof raca.atributos === "string"
-						? raca.atributos
-						: Object.entries( raca.atributos ).map( ( [ atributo, valor ] ) => {
-							if ( isAtributo( atributo ) )
-								return `${ atributo } ${ valor! > 0 ? "+" : "" }${valor}`;
-
-							else
-								return `${ valor! > 0 ? "+" : "" }${valor} em ${ atributo }`;
-						} )
-						.join( ", " ) ) + ".",
-						texto: <></>,
+					nome: textoAtributos( raca ),
+					texto: <></>,
 				} }/>
 
 				{ raca.habilidades.map( h => <RenderHabilidade key={ h.nome } habilidade={ h } /> ) }

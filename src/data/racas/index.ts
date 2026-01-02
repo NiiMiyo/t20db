@@ -1,5 +1,5 @@
 // imports must be relative as this script is required on vite.config.ts
-import { isAtributo } from "../../utils/tormenta"
+import { ordenarAtributos, ordenarRacas } from "../../utils/racas";
 
 import humano from "./humano.ts"
 import anao from "./anao.ts"
@@ -70,47 +70,6 @@ export const Racas: Raca[] = [
 	moreau_coelho, moreau_crocodilo, moreau_gato, moreau_leao, moreau_lobo, moreau_morcego,
 	moreau_urso, nagah_macho, nagah_femea, nezumi, ogro, orc, pteros, soterrado,
 	tabrachi, tengu, trog_anao, velocis, voracis, yidishan,
-].map( tratarRaca ).sort( ordenarRacas );
-
-function ordenarRacas(r1: Raca.Raca, r2: Raca.Raca): number {
-	return r1.nome.localeCompare(r2.nome)
-}
-
-export function ordenarAtributos( atributos: Raca["atributos"] ): Raca["atributos"] {
-	if ( typeof atributos === "string" )
-		return atributos;
-
-	const atributosList = Object.entries( atributos )
-		.map( ( [ atributo, valor ] ) => ({
-			nome: atributo,
-			valor,
-			fixo: isAtributo( atributo ),
-		}) )
-		.filter( ( { valor } ) => valor !== undefined )
-		.sort( ( a1, a2 ) => {
-			if ( a1.fixo === a2.fixo )
-				return a2.valor! - a1.valor!;
-
-			else if ( a1.fixo )
-				return -1;
-
-			else
-				return 1;
-		} );
-
-	const atributosOrdenados: Raca["atributos"] = {};
-	atributosList.forEach( a => {
-		atributosOrdenados[ a.nome ] = a.valor;
-	} );
-
-	return atributosOrdenados;
-}
-
-function tratarRaca( raca: Raca ): Raca {
-	// raca.habilidades.sort( ( h1, h2 ) => h1.nome.localeCompare( h2.nome ) );
-	raca.atributos = ordenarAtributos( raca.atributos );
-
-	return raca;
-}
+].map( ordenarAtributos ).sort( ordenarRacas );
 
 export default Racas;
