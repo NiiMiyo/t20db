@@ -19,7 +19,7 @@ declare namespace Raca {
 		preRequisitos?: string[];
 	};
 
-	type Longevidade = "Normal" | "x2" | "x5" | "Indefinida";
+	type Longevidade = "Normal" | "x2" | "x5" | "Indefinida" | "Variável";
 
 	// todo: Adicionar devoções
 }

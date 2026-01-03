@@ -9,9 +9,12 @@
 .raca {
 	margin: .5rem 0;
 
-	&:not( :last-of-type ) {
-		padding-bottom: .5rem;
-		border-bottom: solid 1px @color-red;
+	/* todo: ocultar borda da raça na ponta */
+	padding-bottom: .5rem;
+	border-bottom: solid 1px @color-red;
+
+	&.oculto {
+		display: none;
 	}
 
 	.sumario {

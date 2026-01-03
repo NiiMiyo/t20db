@@ -5,6 +5,7 @@ import { RenderHabilidade, PageTitle, Filtros } from "@/web/components";
 import { RacaUtils, StringUtils } from "@/utils";
 
 import styles from "./RacasPage.module.less";
+import { makeClassName } from "@/utils/web";
 
 export function RacasPage() {
 	const [ filtroTexto, setFiltroTexto ] = useState( "" );
@@ -36,7 +37,7 @@ export function RacasPage() {
 
 		<div>
 			{ exibir
-				? racasExibidas.map( raca => <details key={ raca.nome } className={ styles.raca } style={ { display: raca.exibir ? undefined : "none" } }>
+				? racasExibidas.map( raca => <details key={ raca.nome } className={ makeClassName( styles.raca, raca.exibir || styles.oculto ) }>
 					<summary className={ styles.sumario }>
 						<span className={ styles.nome }>{ raca.nome }</span>
 						<span className={ styles.livro }>{ raca.livro.nome } p. { raca.livro.pagina }</span>

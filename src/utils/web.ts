@@ -1,5 +1,5 @@
-export function makeClassName( ...names: ( string | undefined | false | null )[] ) {
+export function makeClassName( ...names: ( string | undefined | boolean | null )[] ) {
 	return [ ...new Set( names ) ]
-		.filter( n => !!n )
+		.filter( n => !!n && typeof n !== "boolean" )
 		.join( " " );
 }

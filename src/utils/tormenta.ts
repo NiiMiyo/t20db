@@ -1,6 +1,7 @@
 export const Livros = [
 	"Livro Básico",
 	"Ameaças de Arton",
+	"Heróis de Arton",
 ] as const satisfies LivroTormenta[];
 
 export function isAtributo( atributo: string ): atributo is Atributo {

@@ -1,5 +1,6 @@
 declare type LivroTormenta = "Livro Básico"
-	| "Ameaças de Arton";
+	| "Ameaças de Arton"
+	| "Heróis de Arton";
 
 declare type LivroPagina = {
 	nome: LivroTormenta,
