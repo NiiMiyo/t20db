@@ -1,15 +1,18 @@
 import { createRoot } from "react-dom/client";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { createHashRouter, Navigate, Outlet, RouterProvider } from "react-router-dom";
 
 import { PagesHref, HomePage, RacasPage } from "@/web/pages";
 
 import "@/web/styles/global.less";
 
-const root = createRoot( document.getElementById( "react-app" )! );
-
-root.render( <HashRouter>
-	<Routes>
-		<Route Component={ HomePage } path={ PagesHref.home } />
-		<Route Component={ RacasPage } path={ PagesHref.racas } />
-	</Routes>
-</HashRouter> );
+createRoot( document.getElementById( "react-app" )! )
+	.render( <RouterProvider router={ createHashRouter( [
+		{
+			path: "/", Component: Outlet, errorElement: <Navigate to={ "/" } />,
+			children: [
+				{ Component: HomePage, path: PagesHref.home, },
+				{ Component: RacasPage, path: PagesHref.racas, },
+			],
+		},
+	],
+) } /> );
