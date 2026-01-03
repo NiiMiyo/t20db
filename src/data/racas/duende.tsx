@@ -47,9 +47,9 @@ export default {
 			texto: <span>
 				Duendes não só são esquisitos: eles também conseguem fazer coisas esquisitas. Escolha três poderes da lista abaixo. Todos eles são mágicos. No caso de habilidades que permitam teste de resistência, a CD é Car, a menos que especificado em contrário. Uma vez por patamar, você pode escolher um presente no lugar de um poder de classe. <EspiralMagica />
 
-				<ListarHabilidades tipo="Habilidades" habilidades={ [
+				<ListarHabilidades tipo="Números" habilidades={ [
 					{
-						nome: "1. Afinidade Elemental", texto: <span>
+						nome: "Afinidade Elemental", texto: <span>
 							Você possui ligação com um tipo de elemento do mundo natural, entre água, fogo ou vegetação (escolha uma quando adquirir este presente). Seu atributo-chave para as magias a seguir é Carisma. Caso aprenda novamente qualquer uma delas, seu custo diminui em –1 PM.
 							<ListarHabilidades habilidades={ [
 								{ nome: "Água", texto: "Você é ligado a lagos e rios. Provavelmente tem a pele e/ou os cabelos azulados. Você recebe deslocamento de natação igual ao seu deslocamento base e pode lançar as magias Criar Elementos (apenas água) e Névoa." },
@@ -58,11 +58,11 @@ export default {
 							] }/>
 						</span>,
 					},
-					{ nome: "2. Encantar Objetos", texto: "Você pode gastar uma ação de movimento e 3 PM para tocar um item e colocar nele um encanto pertinente a sua escolha (por exemplo, se tocar uma arma, pode colocar um encanto de arma nela). O encanto não pode ter pré-requisitos e dura até o fim da cena ou até você usar este poder novamente." },
-					{ nome: "3. Enfeitiçar", texto: "Suas feições feéricas podem deslumbrar outros seres. Você pode lançar Enfeitiçar e usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um arcanista de seu nível." },
-					{ nome: "4. Invisibilidade", texto: "Um poder comum entre duendes e responsável por boa parte do folclore confuso sobre eles (“Como assim você não viu aquela tartaruga alada falante que estava aqui agora há pouco?”). Você pode lançar Invisibilidade e usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um arcanista de seu nível." },
-					{ nome: "5. Língua da Natureza", texto: "Você recebe +2 em Adestramento e Sobrevivência, e pode falar com animais e plantas (como o efeito da magia Voz Divina)." },
-					{ nome: "6. Maldição", texto: <div>
+					{ nome: "Encantar Objetos", texto: "Você pode gastar uma ação de movimento e 3 PM para tocar um item e colocar nele um encanto pertinente a sua escolha (por exemplo, se tocar uma arma, pode colocar um encanto de arma nela). O encanto não pode ter pré-requisitos e dura até o fim da cena ou até você usar este poder novamente." },
+					{ nome: "Enfeitiçar", texto: "Suas feições feéricas podem deslumbrar outros seres. Você pode lançar Enfeitiçar e usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um arcanista de seu nível." },
+					{ nome: "Invisibilidade", texto: "Um poder comum entre duendes e responsável por boa parte do folclore confuso sobre eles (“Como assim você não viu aquela tartaruga alada falante que estava aqui agora há pouco?”). Você pode lançar Invisibilidade e usar seus aprimoramentos como se tivesse acesso aos mesmos círculos de magia que um arcanista de seu nível." },
+					{ nome: "Língua da Natureza", texto: "Você recebe +2 em Adestramento e Sobrevivência, e pode falar com animais e plantas (como o efeito da magia Voz Divina)." },
+					{ nome: "Maldição", texto: <div>
 						<p>Nem todos os poderes feéricos são fofos ou engraçados… Você pode gastar uma ação padrão e 3 PM para amaldiçoar uma criatura em alcance curto. A criatura tem direito a um teste de resistência. Se falhar, sofre o efeito da maldição. Se passar, fica imune a este presente por um dia. Para construir sua maldição, escolha qual resistência ela permite (entre Fortitude ou Vontade) e seu efeito (da lista abaixo). Uma vez feitas, essas escolhas não podem ser mudadas.</p>
 						<p>A maldição é permanente, mas você pode cancelá-la como uma ação livre, e ela pode ser curada por Purificação com o aprimoramento de +7 PM. Além disso, você só pode manter uma maldição por vez (se quiser amaldiçoar uma nova criatura, precisa cancelar a maldição anterior). Com a permissão do mestre, você pode criar uma maldição personalizada, usando os efeitos abaixo como referência.</p>
 						<ListarHabilidades habilidades={ [
@@ -74,12 +74,12 @@ export default {
 							{ nome: "Ruína do Corpo", texto: "A criatura fica fatigada e vulnerável." },
 						] }/>
 					</div> },
-					{ nome: "7. Mais Lá do que Aqui", texto: "Você pode gastar uma ação padrão e 2 PM para fazer seu corpo, exceto por uma parte (como a cabeça ou uma cauda), desaparecer pela cena. Nesse estado, recebe camuflagem leve e +5 em Furtividade." },
-					{ nome: "8. Metamorfose Animal", texto: "Você pode se transformar em um tipo de animal. Escolha uma forma selvagem do druida, como ágil ou veloz (veja Tormenta20, p. 63). Você pode gastar uma ação completa e 3 PM para assumir essa forma, recebendo todos seus modificadores. Ao contrário de um druida, você pode falar e lançar magias mesmo em sua forma selvagem. Porém, você pode assumir apenas a forma escolhida, e apenas em sua versão básica." },
-					{ nome: "9. Sonhos Proféticos", texto: "Uma vez por cena, você pode gastar 3 PM para ter uma visão que, graças a sua natureza feérica, provavelmente se concretizará. Role 1d20. Até o fim da cena, você pode substituir o resultado do d20 de um teste realizado por uma criatura em alcance curto pelo resultado do dado que você rolou ao usar este presente." },
-					{ nome: "10. Velocidade do Pensamento", texto: "Em seu primeiro turno em cada cena, você pode gastar 2 PM para realizar uma ação padrão adicional. Se fizer isso, você pula seu turno na segunda rodada." },
-					{ nome: "11. Visão Feérica", texto: "Você recebe visão na penumbra e está permanentemente sob efeito da magia Visão Mística com o aprimoramento de enxergar criaturas e objetos invisíveis." },
-					{ nome: "12. Voo", texto: "Você possui asas ou alguma fonte de voo mágico. Consegue flutuar 1,5m acima do nível do chão com deslocamento igual ao seu deslocamento base +3m, o que permite que ignore terreno difícil e torna-o imune a dano por queda (a menos que esteja inconsciente). Você também pode voar, mas isso é cansativo: você gasta 1 PM por rodada para voar com deslocamento igual ao seu deslocamento base +6m." },
+					{ nome: "Mais Lá do que Aqui", texto: "Você pode gastar uma ação padrão e 2 PM para fazer seu corpo, exceto por uma parte (como a cabeça ou uma cauda), desaparecer pela cena. Nesse estado, recebe camuflagem leve e +5 em Furtividade." },
+					{ nome: "Metamorfose Animal", texto: "Você pode se transformar em um tipo de animal. Escolha uma forma selvagem do druida, como ágil ou veloz (veja Tormenta20, p. 63). Você pode gastar uma ação completa e 3 PM para assumir essa forma, recebendo todos seus modificadores. Ao contrário de um druida, você pode falar e lançar magias mesmo em sua forma selvagem. Porém, você pode assumir apenas a forma escolhida, e apenas em sua versão básica." },
+					{ nome: "Sonhos Proféticos", texto: "Uma vez por cena, você pode gastar 3 PM para ter uma visão que, graças a sua natureza feérica, provavelmente se concretizará. Role 1d20. Até o fim da cena, você pode substituir o resultado do d20 de um teste realizado por uma criatura em alcance curto pelo resultado do dado que você rolou ao usar este presente." },
+					{ nome: "Velocidade do Pensamento", texto: "Em seu primeiro turno em cada cena, você pode gastar 2 PM para realizar uma ação padrão adicional. Se fizer isso, você pula seu turno na segunda rodada." },
+					{ nome: "Visão Feérica", texto: "Você recebe visão na penumbra e está permanentemente sob efeito da magia Visão Mística com o aprimoramento de enxergar criaturas e objetos invisíveis." },
+					{ nome: "Voo", texto: "Você possui asas ou alguma fonte de voo mágico. Consegue flutuar 1,5m acima do nível do chão com deslocamento igual ao seu deslocamento base +3m, o que permite que ignore terreno difícil e torna-o imune a dano por queda (a menos que esteja inconsciente). Você também pode voar, mas isso é cansativo: você gasta 1 PM por rodada para voar com deslocamento igual ao seu deslocamento base +6m." },
 				] }/>
 			</span>,
 		},
@@ -87,7 +87,7 @@ export default {
 			nome: "Passo 5: Limitações",
 			texto: <span>
 				<p>A natureza mágica e caótica dos duendes faz com que eles sejam poderosos — mas também lhes impõe várias limitações. Você recebe as habilidades a seguir.</p>
-				<ListarHabilidades tipo="Habilidades" habilidades={ [
+				<ListarHabilidades habilidades={ [
 					{ nome: "Aversão a Ferro", texto: "Um material rígido e inflexível, o ferro é nocivo a duendes. Você sofre 1 ponto de dano adicional por dado de dano de ataques com armas de ferro e sofre 1d6 pontos de dano por rodada se estiver empunhando ou vestindo um item de ferro. Isso também se aplica a aço, que inclui ferro em sua composição. Na prática, duendes usam apenas armas de madeira ou de materiais especiais, como mitral." },
 					{ nome: "Aversão a Sinos", texto: "O badalar de um sino representa ordem e devoção, algo que faz mal a duendes. Se você escutar esse som, fica alquebrado e esmorecido até o fim da cena. No início de qualquer cena em um ambiente urbano no qual haja uma ou mais igrejas ou templos (o que inclui praticamente todas as aldeias e cidades do Reinado!), role 1d6. Em um resultado 1, você escutará um sino badalando em algum lugar." },
 					{ nome: "Tabu", texto: "Você possui um tabu — algo que nunca pode fazer (ou deixar de fazer). Crie seu tabu junto com o mestre. Em termos de regras, a esquisitice de seu tabu impõe uma penalidade de –5 em Diplomacia, Iniciativa, Luta ou Percepção, a sua escolha (um tabu que afete seu comportamento, por exemplo, impõe –5 em Diplomacia). Se você desrespeitar seu tabu, fica fatigado por um dia (mesmo que seja imune a essa condição). Nenhum efeito pode curar essa condição. Se no dia seguinte continuar desrespeitando o tabu, você fica exausto. Se no terceiro dia não mudar seu comportamento, você morre." },

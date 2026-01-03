@@ -1,4 +1,3 @@
-import RenderHabilidade from "../RenderHabilidade";
 import { HandleEspiralMagica, HandlePreRequisitos } from "../RenderHabilidade/RenderHabilidade.util";
 
 export function ListarHabilidades( props: Readonly<ListarHabilidades.Props> ) {
@@ -6,10 +5,6 @@ export function ListarHabilidades( props: Readonly<ListarHabilidades.Props> ) {
 
 	if ( habilidades.length === 0 )
 		return null;
-
-	if ( tipo === "Habilidades" ) return <>
-		{ habilidades.map( h => <RenderHabilidade key={ h.nome } habilidade={ h } /> ) }
-	</>;
 
 	const content = habilidades.map( h => <li key={ h.nome }>
 		<i>{ h.nome }</i>. { " " }{ h.texto }
