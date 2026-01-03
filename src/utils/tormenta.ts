@@ -1,3 +1,8 @@
+export const Livros = [
+	"Livro Básico",
+	"Ameaças de Arton",
+] as const satisfies LivroTormenta[];
+
 export function isAtributo( atributo: string ): atributo is Atributo {
 	switch ( atributo ) {
 		case "Força":

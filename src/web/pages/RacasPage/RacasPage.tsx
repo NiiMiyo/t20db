@@ -2,12 +2,13 @@ import { useMemo, useState } from "react";
 
 import Racas from "@/data/racas";
 import { RenderHabilidade, PageTitle, Filtros } from "@/web/components";
-import { RacaUtils, StringUtils, WebUtils } from "@/utils";
+import { RacaUtils, StringUtils } from "@/utils";
 
 import styles from "./RacasPage.module.less";
 
 export function RacasPage() {
 	const [ filtroTexto, setFiltroTexto ] = useState( "" );
+	const [ filtroLivro, setFiltroLivro ] = useState<Filtro.Livro.Selection>();
 
 	const { racasExibidas, exibir } = useMemo( () => {
 		let racasExibidas = Racas.map( r => ({ ...r, exibir: true, }) );
@@ -16,19 +17,21 @@ export function RacasPage() {
 			r.exibir = StringUtils.includesIgnoreCaseIgnoreDiacritics( r.nome, filtroTexto );
 		} )
 
+		if ( filtroLivro && Object.values( filtroLivro ).some( Boolean ) ) racasExibidas.forEach( r => {
+			r.exibir = r.exibir && filtroLivro[ r.livro.nome ];
+		} );
+
 		return {
 			racasExibidas,
 			exibir: racasExibidas.some( r => r.exibir ),
 		};
-	}, [ filtroTexto ] );
+	}, [ filtroTexto, filtroLivro ] );
 
 	return <div>
 		<PageTitle>Raças</PageTitle>
 		<div className={ styles.filtros }>
-			<Filtros.FiltroTexto
-				onChange={ WebUtils.setState( setFiltroTexto ) }
-				placeholder="Nome..."
-			/>
+			<Filtros.FiltroTexto onChange={ setFiltroTexto } placeholder="Nome..." />
+			<Filtros.FiltroLivro onChange={ setFiltroLivro } />
 		</div>
 
 		<div>
