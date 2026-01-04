@@ -24,4 +24,4 @@ declare namespace Raca {
 	// todo: Adicionar devoções
 }
 
-type Raca = Raca.Raca;
+declare type Raca = Raca.Raca;
