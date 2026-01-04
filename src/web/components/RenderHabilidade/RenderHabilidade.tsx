@@ -1,4 +1,4 @@
-import { HandleEspiralMagica, HandlePreRequisitos } from "./RenderHabilidade.util";
+import { HandleEspiralMagica, HandlePreRequisitos, HandleTipoEfeito } from "./RenderHabilidade.util";
 
 import styles from "./RenderHabilidade.module.less";
 
@@ -8,5 +8,6 @@ export function RenderHabilidade( { habilidade }: Readonly<RenderHabilidade.Prop
 		{ " " }{ habilidade.texto }
 		<HandlePreRequisitos habilidade={ habilidade } />
 		<HandleEspiralMagica habilidade={ habilidade } />
+		<HandleTipoEfeito habilidade={ habilidade } />
 	</div>;
 }

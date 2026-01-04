@@ -1,4 +1,4 @@
-import { HandleEspiralMagica, HandlePreRequisitos } from "../RenderHabilidade/RenderHabilidade.util";
+import { HandleEspiralMagica, HandlePreRequisitos, HandleTipoEfeito } from "../RenderHabilidade/RenderHabilidade.util";
 
 export function ListarHabilidades( props: Readonly<ListarHabilidades.Props> ) {
 	const { habilidades, tipo = "Pontos" } = props;
@@ -10,6 +10,7 @@ export function ListarHabilidades( props: Readonly<ListarHabilidades.Props> ) {
 		<i>{ h.nome }</i>. { " " }{ h.texto }
 		<HandlePreRequisitos habilidade={ h } />
 		<HandleEspiralMagica habilidade={ h } />
+		<HandleTipoEfeito habilidade={ h } />
 	</li> );
 
 	if ( tipo === "Pontos" )

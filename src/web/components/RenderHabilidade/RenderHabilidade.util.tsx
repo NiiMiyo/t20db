@@ -12,3 +12,8 @@ export function HandleEspiralMagica( { habilidade }: Readonly<RenderHabilidade.P
 	if ( habilidade.magica )
 		return <>{ " " }<EspiralMagica /></>;
 }
+
+export function HandleTipoEfeito( { habilidade }: Readonly<RenderHabilidade.Props> ) {
+	if ( habilidade.tipoEfeito )
+		return <i>{ " " }{ habilidade.tipoEfeito }.</i>
+}
