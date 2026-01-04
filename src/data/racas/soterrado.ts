@@ -13,10 +13,11 @@ export default {
 			nome: "Esquife de Gelo",
 			texto: "Você recebe redução de corte e perfuração 5 e redução de frio 10. Entretanto, sofre 1 ponto de dano adicional por dado de dano de fogo.",
 		},
-		...osteon.habilidades.filter( h => h.nome !== "Armadura Óssea" && h.nome !== "Memória Póstuma" ),
+		osteon.habilidades[2],
+		osteon.habilidades[3],
 	],
 	livro: {
 		nome: "Ameaças de Arton",
 		pagina: 354,
 	},
-} satisfies Raca;
+} as const satisfies Raca;

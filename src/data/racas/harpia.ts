@@ -28,4 +28,4 @@ export default {
 		nome: "Ameaças de Arton",
 		pagina: 201,
 	},
-} satisfies Raca;
+} as const satisfies Raca;

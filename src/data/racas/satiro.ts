@@ -29,4 +29,4 @@ export default {
 		nome: "Heróis de Arton",
 		pagina: 15,
 	},
-} satisfies Raca;
+} as const satisfies Raca;

@@ -9,4 +9,4 @@ export default {
 		Sabedoria: 1,
 		Carisma: 1,
 	},
-} satisfies Raca;
+} as const satisfies Raca;

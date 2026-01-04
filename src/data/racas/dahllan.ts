@@ -25,4 +25,4 @@ export default {
 		nome: "Livro Básico",
 		pagina: 21,
 	}
-} satisfies Raca;
+} as const satisfies Raca;
